@@ -1,3 +1,4 @@
+# outputs after creating eks cluster and vpc and node groups 
 output "cluster_name" {
   description = "Amazon Web Service EKS Cluster Name"
   value       = module.eks.cluster_name
