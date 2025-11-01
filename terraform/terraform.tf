@@ -11,7 +11,7 @@ terraform {
     }
 
     tls = {
-      source  = "hashicorp/tls"
+      source  = "hashicorp/tls" # tls certificate for kubernetes TLS certificate (Transport Layer Security certificate) is exactly what powers HTTPS. HTTPS = HTTP + TLS
       version = "~> 4.0.4"
     }
 
@@ -27,9 +27,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "gitopsterrastate"
+    bucket = "vprofileactionsbelal"
     key    = "terraform.tfstate"
-    region = "us-east-2"
+    region = "us-east-1"
   }
 
   required_version = "~> 1.6.3"
